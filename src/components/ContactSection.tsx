@@ -50,7 +50,7 @@ export function ContactSection() {
               Get in Touch
             </h2>
             <p className="text-white/40 mb-8 max-w-md">
-              Have a question or ready to start your next project? Reach out to us and we'll get back to you promptly.
+              
             </p>
             
             <div className="space-y-6">

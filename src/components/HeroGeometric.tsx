@@ -75,7 +75,7 @@ function ElegantShape({
 
 function HeroGeometric({
     badge = "Digital Innovation",
-    title1 = "Elevate Your Experience",
+    title1 = "Elevate your Experience",
     title2 = "With SPICE",
 }: {
     badge?: string;
@@ -167,8 +167,8 @@ function HeroGeometric({
                         initial="hidden"
                         animate="visible"
                     >
-                        <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold mb-6 md:mb-8 tracking-tight">
-                            <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80">
+                        <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-6 tracking-tight">
+                        <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80">
                                 {title1}
                             </span>
                             <br />
@@ -188,7 +188,7 @@ function HeroGeometric({
                         initial="hidden"
                         animate="visible"
                     >
-                        <p className="text-base sm:text-lg md:text-xl text-white/40 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
+                        <p className="text-sm sm:text-base md:text-lg text-white/40 mb-6 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
                             Transforming digital interactions with innovative solutions that engage, 
                             inspire, and deliver exceptional results.
                         </p>

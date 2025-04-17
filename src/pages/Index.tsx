@@ -11,13 +11,12 @@ const Index = () => {
     <div className="bg-[#030303] min-h-screen">
       <Navigation />
       <HeroGeometric 
-        badge="Innovative Design Studio"
-        title1="Elevate Your Experience"
+        badge=""
+        title1="Elevate your experience"
         title2="With SPICE"
       />
       <FeaturesSection />
       <TestimonialsSection />
-      <ContactSection />
       <Footer />
     </div>
   );
