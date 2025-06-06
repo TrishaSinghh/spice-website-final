@@ -1,13 +1,13 @@
-
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Apple, PlaySquare } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,6 +17,10 @@ export function Navigation() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <>
@@ -30,9 +34,13 @@ export function Navigation() {
       >
         <div className="container mx-auto px-4 md:px-6">
           <nav className="flex items-center justify-between">
-            <Link to="/" className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-300 to-rose-300">
-              SPICE
-            </Link>
+            <Link to="/">
+      <img
+        src="/logo1.svg"
+        alt="SPICE Logo"
+        className="h-10 w-auto"
+      />
+      </Link>
 
             <div className="hidden md:flex items-center space-x-8">
               <Link to="/" className="text-white/70 hover:text-white transition-colors">
@@ -52,12 +60,24 @@ export function Navigation() {
               </Link>
             </div>
 
-            <div className="hidden md:block">
+            <div className="hidden md:flex items-center space-x-4">
               <a
-                href="#contact"
-                className="px-5 py-2 rounded-full bg-gradient-to-r from-amber-500 to-rose-500 text-white font-medium hover:opacity-90 transition-opacity"
+                href="https://apps.apple.com/in/app/spice-split-bills-earn-big/id6581488142"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
               >
-                Get Started
+                <img src="/apple.png" alt="Apple Logo" className="h-5 w-5" />
+                <span className="text-white text-sm">App Store</span>
+              </a>
+              <a
+                href="https://play.google.com/store/apps/details?id=in.spiceclub&hl=en_IN"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+              >
+                <img src="/android.png" alt="Android Logo" className="h-5 w-5" />
+                <span className="text-white text-sm">Play Store</span>
               </a>
             </div>
 
@@ -131,13 +151,26 @@ export function Navigation() {
                 </Link>
               </div>
 
-              <div className="mt-auto mb-8 flex justify-center">
+              <div className="mt-auto mb-8 flex flex-col space-y-4">
                 <a
-                  href="#contact"
-                  className="px-6 py-3 rounded-full bg-gradient-to-r from-amber-500 to-rose-500 text-white font-medium hover:opacity-90 transition-opacity"
+                  href="https://apps.apple.com/in/app/spice-split-bills-earn-big/id6581488142"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center space-x-2 px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Get Started
+                  <Apple className="h-5 w-5" />
+                  <span className="text-white">App Store</span>
+                </a>
+                <a
+                  href="https://play.google.com/store/apps/details?id=in.spiceclub&hl=en_IN"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center space-x-2 px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <PlaySquare className="h-5 w-5" />
+                  <span className="text-white">Play Store</span>
                 </a>
               </div>
             </div>

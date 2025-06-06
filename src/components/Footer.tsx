@@ -1,4 +1,5 @@
 import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function Footer() {
   return (
@@ -20,8 +21,10 @@ export function Footer() {
           {[Twitter, Instagram, Linkedin, Github].map((Icon, i) => (
             <a
               key={i}
-              href="#"
+              href="#" // Replace with your actual social URLs
               className="h-10 w-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Icon className="h-5 w-5 text-white/70 hover:text-white" />
             </a>
@@ -33,20 +36,40 @@ export function Footer() {
 
         {/* Bottom Links */}
         <div className="flex flex-wrap justify-center items-center gap-3 text-[15px] text-white/50 font-medium">
-          {[
-            ["Terms & Conditions", "#"],
-            ["Delete Account", "#"],
-            ["Support", "#"],
-            ["Privacy Policy", "#"],
-            ["Newsletter Signup (Substack)", "#"],
-          ].map(([label, link], index, arr) => (
-            <span key={label} className="flex items-center space-x-2">
-              <a href={link} className="hover:text-white transition-colors">
-                {label}
-              </a>
-              {index < arr.length - 1 && <span className="text-white/30">●</span>}
-            </span>
-          ))}
+          <span className="flex items-center space-x-2">
+            <Link to="/terms" className="hover:text-white transition-colors">
+              Terms & Conditions
+            </Link>
+            <span className="text-white/30">●</span>
+          </span>
+          <span className="flex items-center space-x-2">
+            <Link to="/delete-account" className="hover:text-white transition-colors">
+              Delete Account
+            </Link>
+            <span className="text-white/30">●</span>
+          </span>
+          <span className="flex items-center space-x-2">
+            <Link to="/support" className="hover:text-white transition-colors">
+              Support
+            </Link>
+            <span className="text-white/30">●</span>
+          </span>
+          <span className="flex items-center space-x-2">
+            <Link to="/privacy" className="hover:text-white transition-colors">
+              Privacy Policy
+            </Link>
+            <span className="text-white/30">●</span>
+          </span>
+          <span className="flex items-center space-x-2">
+            <a
+              href="#"
+              className="hover:text-white transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Newsletter Signup (Substack)
+            </a>
+          </span>
         </div>
 
         {/* Copyright */}
