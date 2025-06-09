@@ -55,7 +55,7 @@ export function Footer() {
             <span className="text-white/30">●</span>
           </span>
           <span className="flex items-center space-x-2">
-            <Link to="/privacy" className="hover:text-white transition-colors">
+            <Link to="/privacy-policy" className="hover:text-white transition-colors">
               Privacy Policy
             </Link>
             <span className="text-white/30">●</span>
