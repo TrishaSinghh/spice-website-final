@@ -12,7 +12,7 @@ export default function Terms() {
       <div className="container mx-auto px-4 md:px-12 pt-24 pb-16">
         <h1 className="text-3xl md:text-4xl font-bold mb-6 text-orange-400">Terms and Conditions</h1>
         <p className="text-white/60 text-sm mb-4 italic">
-          Last updated on 10 July 2024
+          Last updated on 5 June 2025
         </p>
 
         <div className="space-y-5 text-white/80 text-[15px] leading-relaxed max-w-4xl">
@@ -73,6 +73,37 @@ export default function Terms() {
           <p>
             If we believe you’ve violated these Terms, our Privacy Policy, or any other
             agreement, appropriate action may be taken including suspension.
+          </p>
+           <h2 className="text-xl font-semibold text-white mt-6 mb-2">
+            How to Request Deletion
+          </h2>
+          <p className="text-white/70 mb-4">
+            To request deletion of your account and data, please send an email to our support team at:
+          </p>
+          <p className="text-white/90 mb-6">
+            <a
+              href="mailto:Tech@spiceclub.in"
+              className="underline text-blue-400 hover:text-blue-300"
+            >
+              Tech@spiceclub.in
+            </a>
+          </p>
+
+          <h2 className="text-xl font-semibold text-white mt-6 mb-2">
+            What Happens Next?
+          </h2>
+          <ul className="list-disc ml-6 space-y-1 text-white/70 mb-6">
+            <li>Your request will be reviewed by our team within 3–5 business days.</li>
+            <li>Once verified, your account will be permanently deleted.</li>
+            <li>All personal and usage data associated with your account will be erased from our systems.</li>
+            <li>This action is irreversible. Make sure to back up anything important before requesting deletion.</li>
+          </ul>
+
+          <h2 className="text-xl font-semibold text-white mt-6 mb-2">
+            Need Help?
+          </h2>
+          <p className="text-white/70 mb-12">
+            If you have any questions or concerns regarding your data or the deletion process, don’t hesitate to reach out to us. We’re here to help.
           </p>
 
           <p className="text-white/40 text-xs mt-10">© 2024 The Content Co. All rights reserved.</p>
